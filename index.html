@@ -66,15 +66,15 @@ span.answer{
 }
 
 body {
-    background-color: #bab4b4;
+    background-color: #EEE;
 }
 
 
 h1 {
-	color:#000;
+	color:#A2D8D4;
 	text-align: center;
 	font-size: 40px;
-	text-shadow: 1px 1px white;
+	text-shadow: 1px 1px black;
 	font-family: "Lucida Console", Lucida, monospace;
 }
 
@@ -96,29 +96,18 @@ h3 {
     font-family: "Courier New", Courier, monospace;
 }
 
-.typewriter h1 {
-  color: #fff;
-  font-family: monospace;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em white; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-}
 
-/* The typing effect */
-.keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-.keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
 }
 
 
@@ -137,13 +126,12 @@ h3 {
 
 <!--About Me Section-->
 <div class="about"><div class="inner">
-	<p><br><br><br><br>I am a computer engineering student.</p><br/><br/><br/>
+	<!--<p><br><br><br><br>I am a computer engineering student.</p><br/><br/><br/>-->
+	<p class="line-1 anim-typewriter"> I am a computer engineering student.</p>
 	<!--Console Text Box-->
 	<div class ="code">
 		<div class="console">
-			<div class"typewriter">
-			<h1>&gt; Nivea.origin<br/></h1>
-		</div>
+			&gt; Nivea.origin<br/>
 			<span class="answer">&nbsp;&nbsp;=&gt; "Palmdale, CA"<br/><br/></span>
 			&gt; Nivea.occupation<br/>
 			<span class="answer">&nbsp;&nbsp;=&gt; "IT Support Specialist/Coder"<br/><br/></span>	
