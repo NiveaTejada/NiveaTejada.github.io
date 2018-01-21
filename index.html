@@ -95,6 +95,34 @@ h3 {
     text-align: center;
     font-family: "Courier New", Courier, monospace;
 }
+
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+.keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+.keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+
+
 </style>
 </head>
 <body>
@@ -106,14 +134,16 @@ h3 {
 
 <h1>Nivea Tejada</h1>
 </div>
-</body>
+
 <!--About Me Section-->
 <div class="about"><div class="inner">
 	<p><br><br><br><br>I am a computer engineering student.</p><br/><br/><br/>
 	<!--Console Text Box-->
 	<div class ="code">
 		<div class="console">
-			&gt; Nivea.origin<br/>
+			<div class"typewriter">
+			<h1>&gt; Nivea.origin<br/></h1>
+		</div>
 			<span class="answer">&nbsp;&nbsp;=&gt; "Palmdale, CA"<br/><br/></span>
 			&gt; Nivea.occupation<br/>
 			<span class="answer">&nbsp;&nbsp;=&gt; "IT Support Specialist/Coder"<br/><br/></span>	
@@ -124,5 +154,5 @@ h3 {
 		</div>
 	</div>
 </div></div>		
-
+</body>
 </html>
