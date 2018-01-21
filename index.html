@@ -122,8 +122,135 @@ h3 {
   to{border-right-color: transparent;}
 }
 
+/*Typing inside the console*/
+.css-typing p {
+  border-right: .15em solid white;
+  font-family: "Courier";
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.css-typing p:nth-child(1) {
+  width: 7.3em;
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
 
+.css-typing p:nth-child(2) {
+  width: 11.5em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
 
+.css-typing p:nth-child(3) {
+  width: 7.3em;
+  opacity: 0;
+  -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+  animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid white;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid white;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid white;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid white;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
+}
+/* End of typing inside the console */
 </style>
 </head>
 <body>
@@ -140,18 +267,20 @@ h3 {
 <div class="about"><div class="inner">
 	<!--<p><br><br><br><br>I am a computer engineering student.</p><br/><br/><br/>-->
 	<br><br><br/><br/><br/>
-	<p> I am a computer engineering student.</p>
+	<p class="line-1 anim-typewriter"> I am a computer engineering student.</p>
 	<!--Console Text Box-->
 	<div class ="code">
 		<div class="console">
-			<p class="line-1 anim-typewriter">&gt; Nivea.origin<br/></p>
-			<span class="answer">&nbsp;&nbsp;=&gt; "Palmdale, CA"<br/><br/></span>
-			&gt; Nivea.occupation<br/>
-			<span class="answer">&nbsp;&nbsp;=&gt; "IT Support Specialist/Coder"<br/><br/></span>	
-			&gt; Nivea.expectedGraduation<br/>
-			<span class="answer">&nbsp;&nbsp;=&gt; "Spring 2019"<br/><br/></span>
-			&gt; Nivea.interests<br/>
-			<span class="answer">&nbsp;&nbsp;=&gt; ["Code", "Reading", "Cyber Security", "Food"]<br/><br/></span>			
+			<div class="css-typing">
+				<p>&gt; Nivea.origin<br/></p>
+				<span class="answer">&nbsp;&nbsp;=&gt; "Palmdale, CA"<br/><br/></span>
+				<p>&gt; Nivea.occupation<br/></p>
+				<span class="answer">&nbsp;&nbsp;=&gt; "IT Support Specialist/Coder"<br/><br/></span>	
+				&gt; Nivea.expectedGraduation<br/>
+				<span class="answer">&nbsp;&nbsp;=&gt; "Spring 2019"<br/><br/></span>
+				&gt; Nivea.interests<br/>
+				<span class="answer">&nbsp;&nbsp;=&gt; ["Code", "Reading", "Cyber Security", "Food"]<br/><br/></span>
+			</div>			
 		</div>
 	</div>
 </div></div>		
