@@ -345,6 +345,30 @@ h5 {
   <h3>LinkedIn</h3>
   <p><a href="https://www.linkedin.com/in/nivea-tejada/">My LinkedIn</a></p> 
 </div>
+<button class="tablink" onclick="openSection('Email', this, '#F864A0')" id="defaultOpen">Email</button>
+<button class="tablink" onclick="openSection('LinkedIn', this, '#60D9F1')">LinkedIn</button>
+
+<script>
+function openSection(cityName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(cityName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
 <!--Beginning of Page-->
 <div class="nameheader">
 	<br><br><br/><br/>
@@ -416,27 +440,7 @@ h5 {
     </div>
   </div>
 </div>
-<button class="tablink" onclick="openSection('Email', this, '#F864A0')" id="defaultOpen">Email</button>
-<button class="tablink" onclick="openSection('LinkedIn', this, '#60D9F1')">LinkedIn</button>
 
-<script>
-function openSection(cityName,elmnt,color) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-    }
-    document.getElementById(cityName).style.display = "block";
-    elmnt.style.backgroundColor = color;
-
-}
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
 
 
 </body>
