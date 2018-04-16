@@ -7,33 +7,44 @@
 <head>
 <style>
 
-.tablink {
-    background-color: #555;
+.dropbtn {
+    background-color: #F864A0;
     color: white;
-    float: left;
+    padding: 16px;
+    font-size: 16px;
     border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 4px 5px;
-    font-size: 13px;
-    width: 50%;
 }
 
-.tablink:hover {
-    background-color: #777;
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-/* Style the tab content */
-.tabcontent {
-    color: white;
+.dropdown-content {
     display: none;
-    padding: 1px;
-    text-align: center;
-    height: 10px;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
-#Email {background-color:#F864A0;}
-#LinkedIn {background-color:#60D9F1;}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
 
 .nameheader {
   background-color: #060C1C;
@@ -337,34 +348,14 @@ h5 {
 <body>
 
 <!-- Header -->
-<div id="Email" class="tabcontent">
-  <p>NiveaTejada@gmail.com</p>
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <p><a href="#">Email: NiveaTejada@gmail.com</a></p>
+    <p><a href="https://www.linkedin.com/in/nivea-tejada/">My LinkedIn</a></p>
+  </div>
 </div>
-
-<div id="LinkedIn" class="tabcontent">
-  <p><a href="https://www.linkedin.com/in/nivea-tejada/">My LinkedIn</a></p> 
-</div>
-<button class="tablink" onclick="openSection('Email', this, '#F864A0')" id="defaultOpen">Email</button>
-<button class="tablink" onclick="openSection('LinkedIn', this, '#60D9F1')">LinkedIn</button>
-
-<script>
-function openSection(cityName,elmnt,color) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-    }
-    document.getElementById(cityName).style.display = "block";
-    elmnt.style.backgroundColor = color;
-
-}
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
 
 
 
